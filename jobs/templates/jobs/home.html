@@ -49,12 +49,13 @@
 }
 
 .carousel-caption {
-width: 550px;
-left: 65%;
-top: 50% !important;
+left: 15%;
+top: 60% !important;
 transform: translateY(-50%);
 text-align: left;
 bottom: initial;
+width: 400px ;
+height: 200px;
 }
 
 
@@ -107,7 +108,7 @@ bottom: initial;
             <hr color="black" width=20% />
             <div class="bg-primary mx-auto" ></div>
             <p class="font-weight-normal text-dark">
-             I'm currently a self-taught developer based in Hamilton, NJ pursuing job opportunities. My personal philosophy is that I am a student for life and for me this means I am always learning and always aiming to better myself. In particular, I like to utilize what I learn from online courses and apply that learning to my personal projects such as making a website, writing code to convert scraped data into usable excel sheets, or writing code that aids my daily life like a BMI (body mass index) calculator. In brief, I am determined to join a company where I can interface my skills with other like-minded individuals and where we can grow to become something bigger than ourselves. Programming can be difficult at times with seemingly unsolvable problems but it is in that moment of clarity when the solution is discovered that makes the struggle worth the while, and it is why I am proud to be a developer.
+            I'm currently a self-taught developer based in Hamilton, NJ pursuing job opportunities. My personal philosophy is that I am a student for life and for me this means I am always learning and always aiming to better myself. In particular, I like to utilize what I learn from online courses and apply that learning to my personal projects such as making a website, writing code to convert scraped data into usable excel sheets, or writing code that aids me in my daily life like a BMI (body mass index) calculator. In brief, I am determined to join a company where I can interface my skills with other like-minded individuals and where we can grow to become something bigger than ourselves. Programming can be difficult at times with seemingly complex problems, but that feeling I get when I finally discover the solution drives me to work harder and harder.
            </p>
            <br/>
          </div>
@@ -280,11 +281,11 @@ bottom: initial;
     <div class="carousel-inner">
       <div class="carousel-item active">
         <img class="d-block w-100" src="{% static 'WordCount.png' %}" alt="First slide">
-          <div class="carousel-caption" id="CountText">
-            <div class="container text-right">
+          <div class="carousel-caption text-left" id="CountText">
+            <div class="container text-center">
               <div class="row bg-dark col-5">
                 <h3 class="lead font-weight-bold text-center"><u>Website Description:</u></h3>
-                <p class="lead font-italic">A simple website that<br/> generates a list of the<br/> most used words in a<br/> body of text.</p>
+                <p class="lead font-italic">Generates most used words as a list.</p>
               </div>
              </div>
           </div>
@@ -292,10 +293,10 @@ bottom: initial;
       <div class="carousel-item">
         <img class="d-block w-100" src="{% static 'KevWebsite.png' %}" alt="Second slide">
           <div class="carousel-caption text-left" id="ProfileText">
-            <div class="container text-right">
+            <div class="container text-center">
               <div class="row bg-light col-5">
-                <h3 class="lead font-weight-bold text-center"><u>Website Description:</u></h3>
-                <p class="lead font-italic">A portfolio website<br/> that showcases my <br/> work and skills.</p>
+                <h6 class="lead font-weight-bold text-center"><u>Website Description:</u></h6>
+                <p class="lead font-italic">Showcases my work and skills.</p>
               </div>
             </div>
           </div>
@@ -306,7 +307,7 @@ bottom: initial;
             <div class="container text-center">
               <div class="row bg-dark col-5">
                 <h3 class="lead font-weight-bold text-center"><u>Website Description:</u></h3>
-                <p class="lead font-italic">A website that<br/>mimics popular websites<br/> like ProductHunt and Reddit.</p>
+                <p class="lead font-italic">A clone website of ProductHunt or Reddit.</p>
               </div>
             </div>
           </div>
@@ -333,7 +334,9 @@ bottom: initial;
           {% for job in jobs.all %}
           <div class="col-md-4">
             <div class="card mb-4 shadow-sm">
-              <img class="card-img-top" src="{{ job.image.url }}" height=200 width=300 />
+              <a href="{% url 'allblogs' %}">
+              <img class="card-img-top" src="{{ job.image.url }}" height=200 width=300></img>
+              </a>
               <div class="card-body">
                 <p class="card-text">{{ job.summary }}</p>
               </div>
@@ -382,7 +385,6 @@ bottom: initial;
       <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/js/bootstrap.min.js"></script>
       <script src="https://cdnjs.cloudflare.com/ajax/libs/feather-icons/4.5.0/feather.min.js"></script>
       <script src="https://cdnjs.cloudflare.com/ajax/libs/Typist/1.2/typist.min.js"></script>
-      <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
       <script src="https://1ginterart-project.s3.amazonaws.com/static/js/scripts.js"></script>
 </body>
 </html>
