@@ -36,57 +36,67 @@
     }
 
     #home {
-      width: 1000px;
-      height: auto;
       max-height: 600px;
+      max-width: 100%;
+      height: auto;
+      float: center;
     }
+
     </style>
   </head>
 
   <body>
 
     <header>
-        <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
-            <a class="navbar-brand lucida" href="{% url 'home' %}">Kevin Purcell</a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-                <div class="navbar-nav ml-auto lucida">
-                  <a class="nav-item nav-link" href="{% url 'home' %}">Home</a>
-                  <a class="nav-item nav-link" href="https://github.com/Purcell-Kevingithub">Github</a>
-                  <a class="nav-item nav-link" href="{% static 'KPurcellResume.pdf' %}">Resume</a>
-                  <a class="nav-item nav-link active" href="{% url 'allblogs' %}">Blog</a>
-                </div>
+      <div class="container-fluid col-sm-12">
+        <nav class="navbar navbar-expand-sm navbar-dark bg-dark fixed-top">
+          <a class="navbar-brand lucida" href="{% url 'home' %}">Kevin Purcell</a>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+            <div class="navbar-nav ml-auto lucida">
+              <a class="nav-item nav-link active" href="{% url 'home' %}">Home</a>
+              <a class="nav-item nav-link" href="https://github.com/Purcell-Kevingithub">Github</a>
+              <a class="nav-item nav-link" href="{% static 'KPurcellResume.pdf' %}">Resume</a>
+              <a class="nav-item nav-link" href="{% url 'allblogs' %}">Blog</a>
             </div>
+          </div>
         </nav>
+      </div>
     </header>
 
     <main role="main">
-        <div class ="container lucida">
-        <h1 class="text-center pt-3">{{ blog.title }}</h1>
-        <p class="text-center">{{ blog.pub_date_pretty }} </p>
-        <img src="{{ blog.image.url }}" id="home"/>
-        <br />
-        <br />
-        <p> {{ blog.body }}</p>
+        <div class ="container-fluid lucida col-12">
+          <div class="col-lg-12">
+            <h1 class="text-center pt-3">{{ blog.title }}</h1>
+            <p class="text-center">{{ blog.pub_date_pretty }} </p>
+            <img src="{{ blog.image.url }}" id="home" class="mx-auto d-block"/>
+            <br />
+            <br />
+          </div>
+          <div class="col-auto">
+            <div class="text-left px-3">
+              <p> {{ blog.body }}</p>
+            </div>
+          </div>
         </div>
     </main>
     <br/>
 
     <footer class="bg-dark text-white lucida py-3" id="contact">
-      <div class="container col-12">
+      <div class="container-fluid col-12">
         <div class="col-12 text-center">
           <h5>Contact Information</h5>
         </div>
-        <div class="row" style="text-align: center;">
-          <p class="col-4 footer-color-email p-2"><img src="{% static 'email.svg' %}" height=50 width=50/> kevin91purcell@gmail.com </p>
-          <p class="col-4 footer-color-phone p-2"><img src="{% static 'iphone.svg' %}" height=50 width=50/>(267) 980 7911 </p>
-          <p class="col-4 footer-color-location p-2"><img src="{% static 'location.svg' %}" height=50 width=50/>Hamilton, NJ <p>
+        <div class="row text-center">
+          <p class="col-md-4 footer-color-email py-2" style="margin: 0px;"><img src="{% static 'email.svg' %}"height=50 width=50/><br/>kevin91purcell@gmail.com</p>
+          <p class="col-md-4 footer-color-phone py-2" style="margin: 0px;"><img src="{% static 'iphone.svg' %}" height=50 width=50/><br/>(267) 980 7911</p>
+          <p class="col-md-4 footer-color-location py-2" style="margin: 0px;"><img src="{% static 'location.svg' %}" height=50 width=50/><br/>Hamilton, NJ <p>
         </div>
         <div class="row">
-          <div class="col-12 text-center">
-            &copy; Kevin Purcell {% now "Y" %}
+          <div class="col-12 text-center pt-3">
+            <h4>&copy; Kevin Purcell {% now "Y" %}</h4>
           </div>
         </div>
       </div>

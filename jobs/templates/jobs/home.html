@@ -13,17 +13,16 @@
 
   <!-- custom CSS internal -->
   <style>
-  #home {
-    height: 550px;
-    background-position: right;
-    background-repeat: no-repeat;
-    background-size: cover;
-    position: relative;
+
+  body {
+    padding-top: 30px;
   }
+
 
   .badge-primary-web {
     color: #ffffff;
     background-color: #6e558c;
+
   }
 
   .progress-bar-web {
@@ -77,111 +76,97 @@
     background-color: #392691;
   }
 
-#carouselmain {
+
+  .lucida {
+    font-family: Lucida Console;
+  }
+
+  .card-bg-1 {
+    background-color: #4f97b3;
+  }
+
+  .card-bg-2 {
+    background-color: #6e558c;
+  }
+
+  .card-bg-3 {
+    background-color: #6780ff;
+  }
+
+  .card-title-first {
+    color: #ffffff;
+  }
+
+  .card-title-second {
+    color: #cfcbc8;
+  }
+
+  .card-title-third {
+    color: #ffffff;
+  }
+
+  .footer-color-phone {
+    background-color: #4f97b3;
+    border-style: solid;
+  }
+
+  .footer-color-email {
+    background-color: #6e558c;
+    border-style: solid;
+  }
+
+  .footer-color-location {
+    background-color: #6780ff;
+    border-style: solid;
+  }
+
+  #home {
+    background-position: right;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+  #carouselmain {
   padding-bottom: 30px;
   width: 60%;
   height: auto;
-}
-
-#CountText {
-  color: #ffee54;
-}
-
-#ProfileText {
-  color: #ffb363;
-}
-
-#ProductText {
-  color: #ffee54;
-}
-
-#about{
-  font-weight: bold;
-}
-
-.carousel-caption {
-left: 15%;
-top: 60% !important;
-transform: translateY(-50%);
-text-align: left;
-bottom: initial;
-width: 400px ;
-height: 200px;
-}
-
-.lucida {
-  font-family: Lucida Console;
-}
-
-.card-bg-1 {
-  background-color: #4f97b3;
-}
-
-.card-bg-2 {
-  background-color: #6e558c;
-}
-
-.card-bg-3 {
-  background-color: #6780ff;
-}
-
-.card-title-first {
-  color: #ffffff;
-}
-
-.card-title-second {
-  color: #cfcbc8;
-}
-
-.card-title-third {
-  color: #ffffff;
-}
-
-.footer-color-phone {
-  background-color: #4f97b3;
-  border-style: solid;
-}
-
-.footer-color-email {
-  background-color: #6e558c;
-  border-style: solid;
-}
-
-.footer-color-location {
-  background-color: #6780ff;
-  border-style: solid;
-}
-
-#skills {
-  font-weight: bold;
-}
-
-body {
-  padding-top: 30px;
-}
-
-#slide-description-titles {
-  color: #4f97b3
-}
-
-#app-description-titles {
-  color: #4f97b3;
-}
-
-#sample-title {
-  color: #6780ff;
-}
-
-#app-title {
-  color: #6780ff;
-}
-
-@media (min-width: 200px) {
-    header, footer.p, footer.span {
-      display: inline-block;
-    }
   }
 
+  #CountText {
+    color: #ffee54;
+  }
+
+  #ProfileText {
+    color: #ffb363;
+  }
+
+  #ProductText {
+    color: #ffee54;
+  }
+
+  #about{
+    font-weight: normal;
+  }
+
+  #skills {
+    font-weight: bold;
+  }
+
+  #slide-description-titles {
+    color: #4f97b3
+  }
+
+  #app-description-titles {
+    color: #4f97b3;
+  }
+
+  #sample-title {
+    color: #6780ff;
+  }
+
+  #app-title {
+    color: #6780ff;
+  }
 
 
 </style>
@@ -189,29 +174,29 @@ body {
 
 
 <body>
-
-
   <!-- navbar section-->
   <header>
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
-      <a class="navbar-brand lucida" href="{% url 'home' %}">Kevin Purcell</a>
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-        <div class="navbar-nav ml-auto lucida">
-          <a class="nav-item nav-link active" href="{% url 'home' %}">Home</a>
-          <a class="nav-item nav-link" href="https://github.com/Purcell-Kevingithub">Github</a>
-          <a class="nav-item nav-link" href="{% static 'KPurcellResume.pdf' %}">Resume</a>
-          <a class="nav-item nav-link" href="{% url 'allblogs' %}">Blog</a>
+    <div class="container-fluid col-sm-12">
+      <nav class="navbar navbar-expand-sm navbar-dark bg-dark fixed-top">
+        <a class="navbar-brand lucida" href="{% url 'home' %}">Kevin Purcell</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+          <div class="navbar-nav ml-auto lucida">
+            <a class="nav-item nav-link active" href="{% url 'home' %}">Home</a>
+            <a class="nav-item nav-link" href="https://github.com/Purcell-Kevingithub">Github</a>
+            <a class="nav-item nav-link" href="{% static 'KPurcellResume.pdf' %}">Resume</a>
+            <a class="nav-item nav-link" href="{% url 'allblogs' %}">Blog</a>
+          </div>
         </div>
-      </div>
-    </nav>
+      </nav>
+    </div>
   </header>
 
 
   <!-- background section -->
-    <section class="bg-hero py-md-5 img-fluid lucida" id="home" style="background-image: url(https://images.pexels.com/photos/370799/pexels-photo-370799.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260)">
+    <section class="py-5 img-fluid lucida" id="home" style="background-image: url(https://images.pexels.com/photos/370799/pexels-photo-370799.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260)">
       <div class="container">
         <h1 style="color:white"; class="text-center">Hi, I'm Kevin.</h1>
         <h2 style="color:white"; class ="text-center">I am a developer and welcome to my website.</h2>
@@ -403,14 +388,16 @@ body {
   <!--Education -->
 <section class="py-5 bg-dark lucida" id="education">
   <div class="container">
-    <div class="col-md-12 mx-auto text-center text-white lucida">
+    <div class="col-md-12 text-center text-white lucida">
             <h1>Education</h1>
             <hr color="white" width=15% />
     </div>
     <br/>
 
-    <div class="card-deck">
-        <div class="col-sm-4 card text-center card-bg-1 py-5">
+<div class="container-fluid">
+  <div class="row">
+    <div class="card-deck col-xl-4">
+        <div class="card text-center card-bg-1 p-5 mt-4" id="card-setting">
             <div class="card-block">
                 <h4 class="card-title card-title-first">Temple University</h4>
                 <span class="font-weight-bold card-title-second">2009 &mdash; 2013 <br/>Bachelor of Arts<br/> in Psychology<br/>Philadelphia, PA</span>
@@ -420,8 +407,10 @@ body {
                 </p>
             </div>
         </div>
+    </div>
 
-        <div class="col-md-4 card text-center card-bg-2 py-5">
+    <div class="card-deck col-xl-4">
+        <div class="card text-center card-bg-2 p-5 mt-4" id="card-setting">
             <div class="card-block">
                 <h4 class="card-title card-title-first">Self-Taught</h4>
                 <span class="font-weight-bold card-title-second">May 2018 &mdash; Current <br/> Online </span>
@@ -432,8 +421,10 @@ body {
                 </p>
             </div>
         </div>
+      </div>
 
-        <div class=" col-md-4 card text-center card-bg-3 py-5">
+      <div class="card-deck col-xl-4">
+        <div class="card text-center card-bg-3 p-5 mt-4" id="card-setting">
             <div class="card-block">
                 <h4 class="card-title card-title-first">Future Plans</h4>
                 <p class="card-text text-left pl-4 card-title-third">
@@ -446,9 +437,9 @@ body {
                 </p>
             </div>
         </div>
+      </div>
     </div>
-
-
+  </div>
 
 
   </div>
@@ -461,7 +452,7 @@ body {
   <hr color="black" width=10% />
   <div class="row">
 
-    <div class="container col-6 text-center py-2">
+    <div class="container col-lg-6 text-center py-2">
       <h2 id="sample-title"> Sample Websites</h2>
       <div id="carousel" class="carousel slide" data-ride="carousel">
         <ol class="carousel-indicators">
@@ -490,7 +481,7 @@ body {
           <span class="sr-only">Next</span>
         </a>
       </div>
-      <div class="container text-left py-2">
+      <div class="container text-left py-2 mt-5">
         <h5 id="slide-description-titles">Slide 1</h5>
         <p style="font-weight: bold;">This website accepts any amount of text as input and returns a list of the most used words.</p>
         <h5 id="slide-description-titles">Slide 2</h5>
@@ -500,7 +491,7 @@ body {
       </div>
     </div>
 
-    <div class="container col-6 py-2">
+    <div class="container col-lg-6 py-2">
       <h2 class="text-center" id="app-title"> Apps </h2>
       <h5 id="app-description-titles">Chat Room App</h5>
       <h6 style="font-weight: bold;">(Open multiple window tabs to experience the chat app.)</h6>
@@ -530,11 +521,11 @@ body {
         <div class="row">
           {% for job in jobs.all %}
           <div class="col-md-4">
-            <div class="card mb-4 shadow-sm">
+            <div class="card my-4 shadow-sm">
               <a href="{% url 'allblogs' %}">
               <img class="card-img-top" src="{{ job.image.url }}" height=200 width=300></img>
               </a>
-              <div class="card-body" style="height: 150px;">
+              <div class="card-body">
                 <p class="card-text">{{ job.summary }}</p>
               </div>
             </div>
@@ -552,13 +543,13 @@ body {
         <h5>Contact Information</h5>
       </div>
       <div class="row text-center">
-        <p class="col-sm-4 footer-color-email py-2"><img src="{% static 'email.svg' %}"height=50 width=50/><br/>kevin91purcell@gmail.com</p>
-        <p class="col-sm-4 footer-color-phone py-2"><img src="{% static 'iphone.svg' %}" height=50 width=50/><br/>(267) 980 7911</p>
-        <p class="col-sm-4 footer-color-location py-2"><img src="{% static 'location.svg' %}" height=50 width=50/><br/>Hamilton, NJ <p>
+        <p class="col-md-4 footer-color-email py-2" style="margin: 0px;"><img src="{% static 'email.svg' %}"height=50 width=50/><br/>kevin91purcell@gmail.com</p>
+        <p class="col-md-4 footer-color-phone py-2" style="margin: 0px;"><img src="{% static 'iphone.svg' %}" height=50 width=50/><br/>(267) 980 7911</p>
+        <p class="col-md-4 footer-color-location py-2" style="margin: 0px;"><img src="{% static 'location.svg' %}" height=50 width=50/><br/>Hamilton, NJ <p>
       </div>
       <div class="row">
-        <div class="col-12 text-center">
-          &copy; Kevin Purcell {% now "Y" %}
+        <div class="col-12 text-center pt-3">
+          <h4>&copy; Kevin Purcell {% now "Y" %}</h4>
         </div>
       </div>
     </div>
