@@ -14,6 +14,12 @@
   <!-- custom CSS internal -->
   <style>
 
+  @media (min-width: 992px){
+    .card-body-big{
+      height: 200px;
+    }
+  }
+
   body {
     padding-top: 30px;
   }
@@ -217,13 +223,13 @@
             <hr color="black" width=15% />
             <div class="bg-primary mx-auto col-mb-3" ></div>
             <p class="text-dark text-left" style="text-indent: 7em;">
-              I'm a self-taught developer based in Hamilton, NJ currently pursuing an entry level developer position. My personal philosophy is that I am a student for life and for me this means always searching for learning opportunities. After realizing I was unhappy with my current job direction, I began searching for a new career path that would allow me to exercise my philosophy more often. After running my first program, I knew I had found the right path.
+              I'm based in Hamilton, NJ currently volunteering at Greentool as a Front-End Web Developer. My personal philosophy is that I am a student for life and for me this means always searching for learning opportunities. After realizing my previous career direction lacked this chance to grow, I began searching for a solution. But after coding my first web page, I knew I had found the right path.
             </p>
             <p class=" text-dark text-left" style="text-indent: 7em;">
-              The first couple of projects I created were simple ranging from a Body Mass Index calculator to a web scraper. Since then, I have transitioned to more complex apps such as my personal website, a weather based app connected to a geolocation API and a weather API, and more recently a chat-app where the users can join private chat rooms.
+              The first couple of projects I created were simple ranging from a Body Mass Index calculator to a web scraper. Since then, as I have transitioned to more complex apps such as my personal website and a weather app based on geolocation API, I have realized the endless possibilities for a career as a Web Developer.
             </p>
             <p class="text-dark text-left" style="text-indent: 7em;">
-              Ultimately, I am determined to join a company where I can synthesize my skills with other like-minded individuals to create remarkable code. Programming can be difficult at times with seemingly complex problems, but the feeling of success when discovering a solution drives me to work harder and harder.
+              Ultimately, I am seeking full time employment at a company where I can synthesize my skills with other like-minded individuals to create remarkable code. Programming can be difficult at times with seemingly complex problems, but the feeling of success after discovering a solution drives me to work harder and harder.
            </p>
            <br/>
          </div>
@@ -400,10 +406,10 @@
         <div class="card text-center card-bg-1 py-5 mt-4" id="card-setting">
             <div class="card-block">
                 <h4 class="card-title card-title-first">Temple University</h4>
-                <span class="font-weight-bold card-title-second">2009 &mdash; 2013 <br/>Bachelor of Arts<br/> in Psychology<br/>Philadelphia, PA</span>
+                <span class="font-weight-bold card-title-second"><i>2009 &mdash; 2013 <br/>Bachelor of Arts<br/> in Psychology<br/>Philadelphia, PA</i></span>
 
                 <p class="card-text text-left pl-4 card-title-third">
-                    <br/>I finished my degree in 4 years while also studying abroad in Japan for 6 months. I use my degree to apply critical thinking to my code.
+                    <br/>I finished my degree in 4 years while also studying abroad in Japan for 6 months. I used this time to elevate my critical thinking skills and my ability to analyze, which I now incorporate into my coding.
                 </p>
             </div>
         </div>
@@ -413,11 +419,11 @@
         <div class="card text-center card-bg-2 py-5 mt-4" id="card-setting">
             <div class="card-block">
                 <h4 class="card-title card-title-first">Self-Taught</h4>
-                <span class="font-weight-bold card-title-second">May 2018 &mdash; Current <br/> Online </span>
+                <span class="font-weight-bold card-title-second"><i>May 2018 &mdash; Current<br/> Online </i></span>
                 <p class="card-text text-left pl-4 card-title-third">
                     <br/>I have received certificates of completion from Udacity's, Codecademy's, and Udemy's courses. The courses covered:<br/></p>
                 <p class="text-left pl-4 card-title-third">
-                  Coding languages, web design, API's, single page applications, frameworks, libraries, routing, databases, models, views, servers, testing, debugging, packages, version control, command line, and code editors.
+                  Javascript, HTML & CSS, jQuery, React, Node.JS, Django, API's, single page applications, MongoDB, PostGreSQL, testing, debugging, version control, the command line, and code editors.
                 </p>
             </div>
         </div>
@@ -433,7 +439,7 @@
                   <br/>
                   <br/>
                     I am planning to explore in the future:
-                    Wireframes, VueJS, PHP, .Net Core, and C#.
+                    Angular, Wireframes, .Net Core, and more advanced animations in CSS and JavaScript.
                 </p>
             </div>
         </div>
@@ -500,7 +506,7 @@
       <br/>
       <h5 id="app-description-titles">To-do App</h5>
       <h6 style="font-weight: bold;">(Requires Postman to interact with JSON objects and data.)</h6>
-      <a href="https://shrouded-eyrie-15738.herokuapp.com/">https://shrouded-eyrie-15738.herokuapp.com/</a>
+      <a href="https://github.com/Purcell-Kevingithub/Node-Todo-API">https://github.com/Purcell-Kevingithub/Node-Todo-API</a>
       <br/>
       <br/>
 
@@ -525,7 +531,7 @@
               <a href="{% url 'allblogs' %}">
               <img class="card-img-top" src="{{ job.image.url }}" height=200 width=300></img>
               </a>
-              <div class="card-body">
+              <div class="card-body card-body-big">
                 <p class="card-text">{{ job.summary }}</p>
               </div>
             </div>
